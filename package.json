@@ -1,29 +1,33 @@
 {
   "name": "@andcreations/nestjs-common",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "clean": "rimraf dist && rimraf node_modules",
-    "rebuild": "rimraf dist && npm run build"
+    "clean": "rm -rf dist && rm -rf node_modules",
+    "rebuild": "rm -rf dist && npm run build"
   },
   "author": "AndCreations",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "@andcreations/common": "andcreations/common.git",
-    "@nestjs/common": "^8.0.6",
+    "@nestjs/common": "8.0.6",
+    "@types/node": "^16.9.1",
     "ansi-colors": "^4.1.1",
     "reflect-metadata": "^0.1.12",
     "rxjs": "^7.1.0",
-    "yaml": "^1.10.2"
-  },
-  "devDependencies": {
-    "@types/node": "^16.9.1",
-    "rimraf": "^3.0.2",
     "ts-node": "^10.2.1",
     "typescript": "^4.4.2",
+    "yaml": "^1.10.2"
+  },
+  "peerDependencies": {
+    "@andcreations/common": "andcreations/common.git",
+    "@nestjs/common": "8.0.6",
+    "ansi-colors": "^4.1.1",
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "^7.1.0",
     "yaml": "^1.10.2"
   }
 }
